@@ -20,36 +20,39 @@ public class EqualsAndhashCode {
 		System.out.println("Details of P4" + p4 + "..." + p4.hashCode());
 		
 		/*	 Step 2 - BEfore overriding Equals Method :
-	 											Details of P1Pen@15db9742...366712642
-												Details of P2Pen@6d06d69c...1829164700
-												Details of P3Pen@7852e922...2018699554
-												[Comparisons p1 && p2  ::]  false
-		  										[Comparisons p2 && p3 ::]  false
-		  										[Comparisons p1 && p3 ::] false 									*/
+	 						Details of P1Pen@15db9742...366712642
+							Details of P2Pen@6d06d69c...1829164700
+							Details of P3Pen@7852e922...2018699554
+							[Comparisons p1 && p2  ::]  false
+		  					[Comparisons p2 && p3 ::]  false
+		  					[Comparisons p1 && p3 ::] false 									*/
 
-		 /* Step 3 -  Contradicts to real Time Scenario i.e Two pens are same if they have same color and same Brand.So, To avoid Contradiction We Override Equals Method.
-		   				Override equals Method in such a way that objects are equal if they have same State.                 */
+		 /* Step 3 -  Contradicts to real Time Scenario i.e Two pens are same if they have same color and same Brand.
+		 	      So, To avoid Contradiction We Override Equals Method.
+		   	      Override equals Method in such a way that objects are equal if they have same State.                 */
 
 		/*  Step 4 -  After Overriding Equals Method :
-		 										Details of P1Pen@15db9742...366712642
-												Details of P2Pen@6d06d69c...1829164700
-												Details of P3Pen@7852e922...2018699554
-												[Comparisons p1 && p2  ::]  false
-		  										[Comparisons p2 && p3 ::]  false
-		  										[Comparisons p1 && p3 ::] true												*/
+		 					Details of P1Pen@15db9742...366712642
+							Details of P2Pen@6d06d69c...1829164700
+							Details of P3Pen@7852e922...2018699554
+							[Comparisons p1 && p2  ::]  false
+		  					[Comparisons p2 && p3 ::]  false
+		  					[Comparisons p1 && p3 ::] true												*/
 
 		
-		/*   Step 5 -	We got the desired Output as P1 and p3 are Equal . are we good now ? we aren't. Step 1 statement Fails . 
-		  				i.e as hashCode is different but objects are equal, which is illegal.
-						To avoid such conflicts we override HashCode method.Hence we can conclude and proved that,if Two objects are equal,then they should have same HashCode.
-						This is the First Statement of HashCode and Equals Contract.                */
+		/*   Step 5 -	We got the desired Output as P1 and p3 are Equal . are we good now ? we aren't. 
+				Step 1 statement Fails . 
+		  		i.e as hashCode is different but objects are equal, which is illegal.
+				To avoid such conflicts we override HashCode method.
+				Hence we can conclude and proved that,if Two objects are equal,then they should have same HashCode.
+				This is the First Statement of HashCode and Equals Contract.                */
 		
 		/* Step 6 -  	Now the Converse Statement.. If Two Objects have same HashCode then can we say that Objects are Equal?? 
-		  				doesnt the statement seems Silly !! How can we conclude the equality of  two objects based on their 
-		  				hashCode(which is just a Memory Location and no concept of Object pooling here)
-		     			without comparing their state ??                                         */
+		  		doesnt the statement seems Silly !! How can we conclude the equality of  two objects based on their 
+		  		hashCode(which is just a Memory Location and no concept of Object pooling here)
+		     		without comparing their state ??                                         */
 		
-		/* Step 7 - Finally, If Two Objects have Same HashCode then objects may or may not be Equal                      */
+		/* Step 7 -    Finally, If Two Objects have Same HashCode then objects may or may not be Equal                      */
 	}
 
 }
