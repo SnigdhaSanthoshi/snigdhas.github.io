@@ -5,8 +5,9 @@ public class EqualsAndhashCode {
 		// TODO Auto-generated method stub
 
 		
-		/*  Step1-   By Definition ==,equals  compares physical address(indirectly it compares HashCode) i,e Equal objects should have Same HashCode.
-							HashCode returns Integer representation of physical Memory address.            */
+		/*  Step1-   	By Definition ==,equals  compares physical address(indirectly it compares HashCode) i,e 
+				Equal objects should have Same HashCode.
+				HashCode returns Integer representation of physical Memory address.            */
 		
 		Pen p1 = new Pen("Abc", "blue",1);
 		Pen p2 = new Pen("Dbc", "Black",1);
